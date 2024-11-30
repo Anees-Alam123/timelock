@@ -14,7 +14,7 @@ contract TimeLock {
     function deposit(uint256 timeInSeconds) external payable {
         require(msg.sender == owner, "Only the owner can deposit funds.");
         require(msg.value > 0, "You must deposit some Ether.");
-        require(lockedAmount == 0, "Funds are already locked.");
+        require(lockedAmount == 0, "currently locked.");
 
         lockedAmount = msg.value;
         unlockTime = block.timestamp + timeInSeconds;
