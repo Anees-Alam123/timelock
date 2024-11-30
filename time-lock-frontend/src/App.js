@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
 
-const CONTRACT_ADDRESS = "0x069d20bd1391cf1b7fa6b1d5f16285dcb359a1f4";
+const CONTRACT_ADDRESS = "0x58ae780c8115c936c7f83cf7ae405ae89a4fa021";
 const ABI = [
   {
     "inputs": [],
@@ -90,7 +90,8 @@ function App() {
 
   return (
     <div>
-      <h1>Time Lock DApp</h1>
+      <p class="box">
+      <h1>Time Lock</h1>
       <button onClick={connectWallet}>Connect Wallet</button>
       <button onClick={getBalance}>Get Balance</button>
       <p>Contract Balance: {balance} ETH</p>
@@ -109,6 +110,7 @@ function App() {
       <button onClick={deposit}>Deposit</button>
       <button onClick={withdraw}>Withdraw</button>
       <p>{message}</p>
+      </p>
     </div>
   );
 }
